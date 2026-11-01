@@ -36,6 +36,9 @@ Append-only memory: [ledger/ticks.jsonl](ledger/ticks.jsonl) · live figures: [s
 
 See the README below the board for what this is, what it may not do, and how to run it by hand.
 
+
+See the README below the board for what this is, what it may not do, and how to run it by hand.
+
 ## What it does on every tick
 
 1. **Liveness** — asks the public rail for its pages and assets. A 404 is a finding.
