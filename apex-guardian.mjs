@@ -18,8 +18,8 @@ import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } fr
 import { pathToFileURL } from "node:url";
 
 const RAIL = (process.env.APEX_RAIL_URL || "https://filmverse-1mil8xwzv4y.qoder.website").replace(/\/$/, "");
-const PAGES = ["index", "workflow", "verse", "tools", "rights", "verify", "passport", "console"];
-const ASSETS = ["styles.css", "shell.js", "data.generated.js", "tool-links.js"];
+const PAGES = ["index", "workflow", "verse", "tools", "rights", "verify", "passport", "console", "dailies"];
+const ASSETS = ["styles.css", "shell.js", "data.generated.js", "tool-links.js", "assets/dailies/preview.mp4"];
 const UA = "APEX-Guardian/1.0 (protective integrity check)";
 
 const STATE_FILE = "state.json";
