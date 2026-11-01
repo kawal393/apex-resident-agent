@@ -1,15 +1,19 @@
 name: guardian
 
 # Every 15 minutes, forever, on GitHub's free runners. No server, no card, no GPU.
+# Editing the guardian or this file also runs one tick, so a change proves itself.
 on:
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch: {}
+  push:
+    paths:
+      - "apex-guardian.mjs"
+      - "board.mjs"
+      - ".github/workflows/guardian.yml"
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: guardian
@@ -17,9 +21,6 @@ concurrency:
 
 jobs:
   tick:
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,29 +29,28 @@ jobs:
         with:
           node-version: "22"
 
+      - name: refuse to run a tree that carries a credential
+        run: node gate.mjs
+
       - name: measure the live rail
         id: measure
         continue-on-error: true
         run: node apex-guardian.mjs | tee tick.log
 
+      - name: render the board into the README
+        run: node board.mjs
+
       - name: keep the memory
         run: |
           git config user.name "APEX Guardian"
           git config user.email "guardian@apex.invalid"
-          git add state.json ledger/ status/data.json
+          git add state.json ledger/ status/data.json README.md
           git diff --cached --quiet || git commit -m "guardian: tick $(date -u +%FT%TZ) [skip ci]"
           git push
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: status
-
-      - id: deploy
-        uses: actions/deploy-pages@v4
 
       - name: fail loudly when it found something
         run: |
           if node -e "const s=require('./state.json');process.exit(s.findings.length?1:0)"; then
             echo "clean"; else
-            echo "::error::the guardian found something on the live rail — see the status board"; exit 1;
+            echo "::error::the guardian found something on the live rail — the board in this README says what"; exit 1;
           fi

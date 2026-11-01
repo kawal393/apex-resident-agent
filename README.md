@@ -1,48 +1,72 @@
 # APEX Guardian
 
-The resident body of the Sovereign AI Film Verse. It runs every fifteen minutes on GitHub's
-free runners — no server, no card, no GPU, nothing installed on anyone's laptop.
+<!-- guardian:begin -->
+
+## CLEAN — tick 4 at 2026-11-01T20:08:11.030Z
+
+Every public file answered, nothing changed since the previous tick, and no credential appeared in a file the world can read. **2 clean ticks in a row.**
+
+| measured | value |
+| --- | --- |
+| public files checked | 12 |
+| slowest response | 2328 ms |
+| tick wall clock | 2.4 s |
+| live build | `d66d08fcf0bcec29` |
+| registry rows it can see | 1109 |
+| licences read by a human | 0 |
+| stages wired | 9/10 |
+
+### Findings
+_none_
+
+### Waiting, and who can move it
+- **builder** — name-the-till: APEX_TILL_URL is unset, so no one is checking that the paid endpoint still refuses strangers
+- **master** — licence-read: 1109 of 1109 rows have never been read by a human, so the platform refuses every job
+- **builder** — route-stage: stages with nothing wired: dialogue
+
+### Last 40 ticks
+
+```
+■■□□
+```
+
+Append-only memory: [ledger/ticks.jsonl](ledger/ticks.jsonl) · live figures: [state.json](state.json)
+
+<!-- guardian:end -->
+
+See the README below the board for what this is, what it may not do, and how to run it by hand.
 
 ## What it does on every tick
 
-1. **Liveness** — asks the public rail for its eight pages and four assets. A 404 is a finding.
-2. **Which build shipped** — reads the `VERSE_BUILD` token out of the live data file. That token is
-   the hash of the registry rows that produced it, so a claim about the site can be traced to code.
-3. **Integrity** — fingerprints every public file and compares it with the previous tick. A page
-   changing, vanishing, or appearing unannounced is a finding, not a rumour.
-4. **Leaks** — scans the public responses for credential shapes. It reports the rule and the
-   filename; it never reads or prints the value.
-5. **The queue** — derives what is left to do from the numbers the rail itself publishes, and marks
-   each item with the only person who can close it.
+1. **Liveness** — asks the public rail for its pages and assets. A 404 is a finding.
+2. **Which build shipped** — reads the `VERSE_BUILD` token out of the live data file, so a claim about the site traces to code.
+3. **Integrity** — fingerprints every public file and compares it with the previous tick. A page changing, vanishing, or appearing unannounced is a finding.
+4. **Leaks** — scans the public responses for credential shapes. It reports the rule and the filename; it never reads or prints the value.
+5. **The queue** — derives what is left from the numbers the rail publishes, and marks the only person who can close each item.
 
 ## What it cannot do
 
-It has no login, no key, no budget. It cannot publish, deploy, spend, email, or post. The most it
-can do is write its own `state.json`, append to `ledger/ticks.jsonl`, and fail its run so GitHub
-sends the owner a notice.
+No login, no key, no budget. It cannot publish, deploy, spend, email or post. The most it can do is
+write its own files and fail its run so the owner gets a notice.
 
 ## Running it by hand
 
 ```sh
-node apex-guardian.mjs          # one tick; exit 1 when it found something
+node gate.mjs                    # refuse to ship a tree carrying a credential
+node apex-guardian.mjs           # one tick; exit 1 when it found something
+node board.mjs                   # render the last tick into README.md
 APEX_RAIL_URL=https://other-site node apex-guardian.mjs
 ```
 
-Requires Node 22 or newer and outbound HTTPS to the rail. No dependencies, nothing to install.
-
-## The board
-
-The workflow publishes `status/` to GitHub Pages. It prints only what the last tick measured,
-including every finding, so an honest day and a bad day look different.
+Requires Node 22+ and outbound HTTPS. No dependencies.
 
 ## Why git is the database
 
-A free runner forgets everything between runs. Commits do not. The ledger is append-only JSONL, one
-line per tick, which means the guardian's history outlives the machine it ran on and stays readable
-by anyone without a key.
+A free runner forgets everything between runs; commits do not. The ledger is one JSON line per tick,
+so the guardian's history outlives the machine it ran on.
 
 ## What this is not yet
 
-The open-weights model that *thinks* about the backlog does not live here: a runner has no GPU and
-forgets its disk, so a nine-gigabyte model would be re-downloaded every fifteen minutes. The
-guardian is the always-on body; the brain needs the server that has not been signed up for yet.
+The open-weights model that *thinks* about the queue does not live here: a runner has no GPU and
+forgets its disk, so a nine-gigabyte model would be re-downloaded every fifteen minutes. This is the
+always-on body. The brain needs a server.
