@@ -2,15 +2,15 @@
 
 <!-- guardian:begin -->
 
-## CLEAN — tick 5 at 2026-11-01T20:10:01.415Z
+## CLEAN — tick 6 at 2026-11-01T20:10:31.466Z
 
-Every public file answered, nothing changed since the previous tick, and no credential appeared in a file the world can read. **3 clean ticks in a row.**
+Every public file answered, nothing changed since the previous tick, and no credential appeared in a file the world can read. **4 clean ticks in a row.**
 
 | measured | value |
 | --- | --- |
 | public files checked | 12 |
-| slowest response | 1879 ms |
-| tick wall clock | 1.9 s |
+| slowest response | 1337 ms |
+| tick wall clock | 1.4 s |
 | live build | `d66d08fcf0bcec29` |
 | registry rows it can see | 1109 |
 | licences read by a human | 0 |
@@ -27,12 +27,15 @@ _none_
 ### Last 40 ticks
 
 ```
-■■□□□
+■■□□□□
 ```
 
 Append-only memory: [ledger/ticks.jsonl](ledger/ticks.jsonl) · live figures: [state.json](state.json)
 
 <!-- guardian:end -->
+
+See the README below the board for what this is, what it may not do, and how to run it by hand.
+
 
 See the README below the board for what this is, what it may not do, and how to run it by hand.
 
