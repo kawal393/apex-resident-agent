@@ -1,0 +1,67 @@
+{
+  "lastTick": "2026-11-01T20:06:21.712Z",
+  "ticks": 3,
+  "rail": "https://filmverse-1mil8xwzv4y.qoder.website",
+  "build": "d66d08fcf0bcec29",
+  "wallClockSeconds": 2,
+  "filesChecked": 12,
+  "slowestMs": 1903,
+  "measured": {
+    "rows": 1109,
+    "cleared": 0,
+    "awaitingLicenceRead": 1109,
+    "stagesWired": "9/10"
+  },
+  "fingerprints": {
+    "index.html": "7d123fcf08261363",
+    "workflow.html": "32f7dfad5a334566",
+    "verse.html": "5074f27b8716873b",
+    "tools.html": "b8ecb2e521855293",
+    "rights.html": "c19688e3d81a4e59",
+    "verify.html": "ad68450252e8771c",
+    "passport.html": "027362517da333a0",
+    "console.html": "d092fbf41707e3bd",
+    "styles.css": "02101c2f51e861b5",
+    "shell.js": "c524c5b025c0e9ce",
+    "data.generated.js": "f056fc7fa425b575",
+    "tool-links.js": "5a7ca89d3c00683d"
+  },
+  "findings": [],
+  "backlog": [
+    {
+      "id": "name-the-till",
+      "owner": "builder",
+      "why": "APEX_TILL_URL is unset, so no one is checking that the paid endpoint still refuses strangers"
+    },
+    {
+      "id": "licence-read",
+      "owner": "master",
+      "why": "1109 of 1109 rows have never been read by a human, so the platform refuses every job"
+    },
+    {
+      "id": "route-stage",
+      "owner": "builder",
+      "why": "stages with nothing wired: dialogue"
+    }
+  ],
+  "history": [
+    {
+      "at": "2026-11-01T20:03:08.607Z",
+      "ok": false,
+      "findings": 2,
+      "s": 2.4
+    },
+    {
+      "at": "2026-11-01T20:06:11.071Z",
+      "ok": false,
+      "findings": 2,
+      "s": 2
+    },
+    {
+      "at": "2026-11-01T20:06:21.712Z",
+      "ok": true,
+      "findings": 0,
+      "s": 2
+    }
+  ]
+}

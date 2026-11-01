@@ -1,0 +1,56 @@
+name: guardian
+
+# Every 15 minutes, forever, on GitHub's free runners. No server, no card, no GPU.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: guardian
+  cancel-in-progress: false
+
+jobs:
+  tick:
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: measure the live rail
+        id: measure
+        continue-on-error: true
+        run: node apex-guardian.mjs | tee tick.log
+
+      - name: keep the memory
+        run: |
+          git config user.name "APEX Guardian"
+          git config user.email "guardian@apex.invalid"
+          git add state.json ledger/ status/data.json
+          git diff --cached --quiet || git commit -m "guardian: tick $(date -u +%FT%TZ) [skip ci]"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: status
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: fail loudly when it found something
+        run: |
+          if node -e "const s=require('./state.json');process.exit(s.findings.length?1:0)"; then
+            echo "clean"; else
+            echo "::error::the guardian found something on the live rail — see the status board"; exit 1;
+          fi
