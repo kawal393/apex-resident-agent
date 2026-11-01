@@ -15,6 +15,7 @@
 
 import { createHash } from "node:crypto";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { pathToFileURL } from "node:url";
 
 const RAIL = (process.env.APEX_RAIL_URL || "https://filmverse-1mil8xwzv4y.qoder.website").replace(/\/$/, "");
 const PAGES = ["index", "workflow", "verse", "tools", "rights", "verify", "passport", "console"];
@@ -151,7 +152,9 @@ export async function tick() {
   return { ok, state };
 }
 
-if (process.argv[1] && import.meta.url === new URL(`file:///${process.argv[1].replace(/\\/g, "/")}`).href) {
+// pathToFileURL, not a hand-built "file:///" string: on Linux argv[1] already starts with a
+// slash, so a hand-built URL has four of them and never matches — the tick silently never ran.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   mkdirSync("status", { recursive: true });
   mkdirSync(LEDGER_DIR, { recursive: true });
   tick()

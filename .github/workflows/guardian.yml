@@ -37,6 +37,18 @@ jobs:
         continue-on-error: true
         run: node apex-guardian.mjs | tee tick.log
 
+      # A green run that wrote nothing is worse than a red one. This step makes "passed but
+      # empty" impossible: the state file must be fresher than ten minutes or the run fails.
+      - name: prove the tick actually ran
+        run: |
+          node -e "
+          const s=require('./state.json');
+          const age=Date.now()-Date.parse(s.lastTick);
+          if(!Number.isFinite(age)||age>600000) throw new Error('state.json is '+(age/60000|0)+' minutes old — the guardian did not write this tick');
+          if(s.filesChecked<1) throw new Error('the guardian recorded zero files');
+          console.log('fresh',Math.round(age/1000)+'s, build',s.build,'files',s.filesChecked);
+          "
+
       - name: render the board into the README
         run: node board.mjs
 
