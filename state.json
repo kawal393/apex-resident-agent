@@ -1,11 +1,11 @@
 {
-  "lastTick": "2026-11-04T03:00:33.668Z",
-  "ticks": 16,
+  "lastTick": "2026-11-04T10:58:13.008Z",
+  "ticks": 17,
   "rail": "https://filmverse-1mil8xwzv4y.qoder.website",
   "build": "d66d08fcf0bcec29",
-  "wallClockSeconds": 2.3,
+  "wallClockSeconds": 2.4,
   "filesChecked": 14,
-  "slowestMs": 2270,
+  "slowestMs": 2318,
   "measured": {
     "rows": 1109,
     "cleared": 0,
@@ -13,22 +13,24 @@
     "stagesWired": "9/10"
   },
   "fingerprints": {
-    "index.html": "7d123fcf08261363",
-    "workflow.html": "32f7dfad5a334566",
-    "verse.html": "5074f27b8716873b",
-    "tools.html": "b8ecb2e521855293",
-    "rights.html": "c19688e3d81a4e59",
-    "verify.html": "ad68450252e8771c",
-    "passport.html": "027362517da333a0",
-    "console.html": "d092fbf41707e3bd",
-    "dailies.html": "6e4ac1b9cfdf1f8d",
-    "styles.css": "02101c2f51e861b5",
-    "shell.js": "b9374e9d20166446",
-    "data.generated.js": "f056fc7fa425b575",
+    "index.html": "7c6ae6847550f11c",
+    "workflow.html": "cc84ce34dfd9a5ae",
+    "verse.html": "26f79f050004bdfb",
+    "tools.html": "275868b9474fe01c",
+    "rights.html": "3a4ffda81bf61664",
+    "verify.html": "06f56d5053ab0485",
+    "passport.html": "0455d7052f212585",
+    "console.html": "e9116f655becdaa3",
+    "dailies.html": "16bcd7cb9169e561",
+    "styles.css": "a6e00cbde031d55d",
+    "shell.js": "6d882fd8fa2c2124",
+    "data.generated.js": "3c77692dcd055673",
     "tool-links.js": "5a7ca89d3c00683d",
-    "assets/dailies/preview.mp4": "673c86951b59afc0"
+    "assets/dailies/preview.mp4": "73b432729e96c4e9"
   },
-  "findings": [],
+  "findings": [
+    "live files changed since the previous tick: index.html, workflow.html, verse.html, tools.html, rights.html, verify.html, passport.html, console.html, dailies.html, styles.css, shell.js, data.generated.js, assets/dailies/preview.mp4"
+  ],
   "backlog": [
     {
       "id": "name-the-till",
@@ -142,6 +144,12 @@
       "ok": true,
       "findings": 0,
       "s": 2.3
+    },
+    {
+      "at": "2026-11-04T10:58:13.008Z",
+      "ok": false,
+      "findings": 1,
+      "s": 2.4
     }
   ]
 }
