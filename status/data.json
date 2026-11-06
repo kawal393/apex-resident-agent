@@ -1,11 +1,11 @@
 {
-  "lastTick": "2026-11-06T08:32:56.736Z",
-  "ticks": 24,
+  "lastTick": "2026-11-06T16:19:45.070Z",
+  "ticks": 25,
   "rail": "https://filmverse-1mil8xwzv4y.qoder.website",
   "build": "d66d08fcf0bcec29",
-  "wallClockSeconds": 2.1,
+  "wallClockSeconds": 2.2,
   "filesChecked": 14,
-  "slowestMs": 2011,
+  "slowestMs": 2108,
   "measured": {
     "rows": 1109,
     "cleared": 0,
@@ -13,7 +13,7 @@
     "stagesWired": "9/10"
   },
   "fingerprints": {
-    "index.html": "7c6ae6847550f11c",
+    "index.html": "84fd683fe989cd9b",
     "workflow.html": "cc84ce34dfd9a5ae",
     "verse.html": "26f79f050004bdfb",
     "tools.html": "275868b9474fe01c",
@@ -23,12 +23,14 @@
     "console.html": "e9116f655becdaa3",
     "dailies.html": "16bcd7cb9169e561",
     "styles.css": "a6e00cbde031d55d",
-    "shell.js": "6d882fd8fa2c2124",
+    "shell.js": "87d60bd389235339",
     "data.generated.js": "3c77692dcd055673",
     "tool-links.js": "5a7ca89d3c00683d",
     "assets/dailies/preview.mp4": "73b432729e96c4e9"
   },
-  "findings": [],
+  "findings": [
+    "live files changed since the previous tick: index.html, shell.js"
+  ],
   "backlog": [
     {
       "id": "name-the-till",
@@ -190,6 +192,12 @@
       "ok": true,
       "findings": 0,
       "s": 2.1
+    },
+    {
+      "at": "2026-11-06T16:19:45.070Z",
+      "ok": false,
+      "findings": 1,
+      "s": 2.2
     }
   ]
 }
