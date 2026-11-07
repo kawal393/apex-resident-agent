@@ -1,11 +1,11 @@
 {
-  "lastTick": "2026-11-06T21:43:40.446Z",
-  "ticks": 26,
+  "lastTick": "2026-11-07T01:18:00.020Z",
+  "ticks": 27,
   "rail": "https://filmverse-1mil8xwzv4y.qoder.website",
   "build": "53fe35b2f4464f0e",
-  "wallClockSeconds": 2.2,
+  "wallClockSeconds": 2.7,
   "filesChecked": 14,
-  "slowestMs": 2176,
+  "slowestMs": 2603,
   "measured": {
     "rows": 1109,
     "cleared": 0,
@@ -18,7 +18,7 @@
     "verse.html": "26f79f050004bdfb",
     "tools.html": "1c554c9d25976a0f",
     "rights.html": "3a4ffda81bf61664",
-    "verify.html": "06f56d5053ab0485",
+    "verify.html": "74a8f83ed3d7fffe",
     "passport.html": "0455d7052f212585",
     "console.html": "e9116f655becdaa3",
     "dailies.html": "16bcd7cb9169e561",
@@ -29,7 +29,7 @@
     "assets/dailies/preview.mp4": "73b432729e96c4e9"
   },
   "findings": [
-    "live files changed since the previous tick: index.html, tools.html, styles.css, data.generated.js"
+    "live files changed since the previous tick: verify.html"
   ],
   "backlog": [
     {
@@ -204,6 +204,12 @@
       "ok": false,
       "findings": 1,
       "s": 2.2
+    },
+    {
+      "at": "2026-11-07T01:18:00.020Z",
+      "ok": false,
+      "findings": 1,
+      "s": 2.7
     }
   ]
 }
