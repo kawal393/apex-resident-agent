@@ -2,37 +2,40 @@
 
 <!-- guardian:begin -->
 
-## CLEAN — tick 35 at 2026-11-08T20:17:57.405Z
+## FINDINGS — tick 36 at 2026-11-08T23:55:38.891Z
 
-Every public file answered, nothing changed since the previous tick, and no credential appeared in a file the world can read. **8 clean ticks in a row.**
+The guardian found 1 thing(s) on the live rail. It reports; it does not fix by itself.
 
 | measured | value |
 | --- | --- |
 | public files checked | 14 |
-| slowest response | 2862 ms |
-| tick wall clock | 2.9 s |
-| live build | `53fe35b2f4464f0e` |
-| registry rows it can see | 1109 |
+| slowest response | 2058 ms |
+| tick wall clock | 2.1 s |
+| live build | `91215ecdf248747f` |
+| registry rows it can see | 1118 |
 | licences read by a human | 0 |
 | stages wired | 9/10 |
 
 ### Findings
-_none_
+- live files changed since the previous tick: index.html, workflow.html, verse.html, tools.html, rights.html, verify.html, passport.html, console.html, dailies.html, styles.css, shell.js, data.generated.js, tool-links.js
 
 ### Waiting, and who can move it
 - **builder** — name-the-till: APEX_TILL_URL is unset, so no one is checking that the paid endpoint still refuses strangers
-- **master** — licence-read: 1109 of 1109 rows have never been read by a human, so the platform refuses every job
+- **master** — licence-read: 1118 of 1118 rows have never been read by a human, so the platform refuses every job
 - **builder** — route-stage: stages with nothing wired: dialogue
 
 ### Last 40 ticks
 
 ```
-■■□□□□■□□□□□□□□□■□□□□□□□■■■□□□□□□□□
+■■□□□□■□□□□□□□□□■□□□□□□□■■■□□□□□□□□■
 ```
 
 Append-only memory: [ledger/ticks.jsonl](ledger/ticks.jsonl) · live figures: [state.json](state.json)
 
 <!-- guardian:end -->
+
+See the README below the board for what this is, what it may not do, and how to run it by hand.
+
 
 See the README below the board for what this is, what it may not do, and how to run it by hand.
 

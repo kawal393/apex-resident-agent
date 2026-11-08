@@ -1,34 +1,36 @@
 {
-  "lastTick": "2026-11-08T20:17:57.405Z",
-  "ticks": 35,
+  "lastTick": "2026-11-08T23:55:38.891Z",
+  "ticks": 36,
   "rail": "https://filmverse-1mil8xwzv4y.qoder.website",
-  "build": "53fe35b2f4464f0e",
-  "wallClockSeconds": 2.9,
+  "build": "91215ecdf248747f",
+  "wallClockSeconds": 2.1,
   "filesChecked": 14,
-  "slowestMs": 2862,
+  "slowestMs": 2058,
   "measured": {
-    "rows": 1109,
+    "rows": 1118,
     "cleared": 0,
-    "awaitingLicenceRead": 1109,
+    "awaitingLicenceRead": 1118,
     "stagesWired": "9/10"
   },
   "fingerprints": {
-    "index.html": "f2755b38df34ba4b",
-    "workflow.html": "cc84ce34dfd9a5ae",
-    "verse.html": "26f79f050004bdfb",
-    "tools.html": "1c554c9d25976a0f",
-    "rights.html": "3a4ffda81bf61664",
-    "verify.html": "74a8f83ed3d7fffe",
-    "passport.html": "0455d7052f212585",
-    "console.html": "e9116f655becdaa3",
-    "dailies.html": "16bcd7cb9169e561",
-    "styles.css": "deedd5e8e68bd792",
-    "shell.js": "87d60bd389235339",
-    "data.generated.js": "111a778a31098679",
-    "tool-links.js": "5a7ca89d3c00683d",
+    "index.html": "2afdb42fcd4797b3",
+    "workflow.html": "d13dcbd08486a5ec",
+    "verse.html": "353692668044b0cb",
+    "tools.html": "b2ecbd1807fd57a7",
+    "rights.html": "f36263ad18a66a02",
+    "verify.html": "a58dc5ebd9a20564",
+    "passport.html": "f82d9d9257135daa",
+    "console.html": "467796daaa70169b",
+    "dailies.html": "99c9bc376668a7f9",
+    "styles.css": "dce2a8e919d9a0b9",
+    "shell.js": "7d583dafbf178225",
+    "data.generated.js": "4a0c44387714b9e8",
+    "tool-links.js": "19c9b2fb3e015545",
     "assets/dailies/preview.mp4": "73b432729e96c4e9"
   },
-  "findings": [],
+  "findings": [
+    "live files changed since the previous tick: index.html, workflow.html, verse.html, tools.html, rights.html, verify.html, passport.html, console.html, dailies.html, styles.css, shell.js, data.generated.js, tool-links.js"
+  ],
   "backlog": [
     {
       "id": "name-the-till",
@@ -38,7 +40,7 @@
     {
       "id": "licence-read",
       "owner": "master",
-      "why": "1109 of 1109 rows have never been read by a human, so the platform refuses every job"
+      "why": "1118 of 1118 rows have never been read by a human, so the platform refuses every job"
     },
     {
       "id": "route-stage",
@@ -256,6 +258,12 @@
       "ok": true,
       "findings": 0,
       "s": 2.9
+    },
+    {
+      "at": "2026-11-08T23:55:38.891Z",
+      "ok": false,
+      "findings": 1,
+      "s": 2.1
     }
   ]
 }
