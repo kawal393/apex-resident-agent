@@ -2,22 +2,22 @@
 
 <!-- guardian:begin -->
 
-## FINDINGS — tick 36 at 2026-11-08T23:55:38.891Z
+## FINDINGS — tick 37 at 2026-11-09T05:36:01.273Z
 
 The guardian found 1 thing(s) on the live rail. It reports; it does not fix by itself.
 
 | measured | value |
 | --- | --- |
 | public files checked | 14 |
-| slowest response | 2058 ms |
-| tick wall clock | 2.1 s |
+| slowest response | 2448 ms |
+| tick wall clock | 2.5 s |
 | live build | `91215ecdf248747f` |
 | registry rows it can see | 1118 |
 | licences read by a human | 0 |
 | stages wired | 9/10 |
 
 ### Findings
-- live files changed since the previous tick: index.html, workflow.html, verse.html, tools.html, rights.html, verify.html, passport.html, console.html, dailies.html, styles.css, shell.js, data.generated.js, tool-links.js
+- live files changed since the previous tick: index.html, workflow.html, verse.html, tools.html, rights.html, verify.html, passport.html, console.html, dailies.html, shell.js, tool-links.js
 
 ### Waiting, and who can move it
 - **builder** — name-the-till: APEX_TILL_URL is unset, so no one is checking that the paid endpoint still refuses strangers
@@ -27,12 +27,15 @@ The guardian found 1 thing(s) on the live rail. It reports; it does not fix by i
 ### Last 40 ticks
 
 ```
-■■□□□□■□□□□□□□□□■□□□□□□□■■■□□□□□□□□■
+■■□□□□■□□□□□□□□□■□□□□□□□■■■□□□□□□□□■■
 ```
 
 Append-only memory: [ledger/ticks.jsonl](ledger/ticks.jsonl) · live figures: [state.json](state.json)
 
 <!-- guardian:end -->
+
+See the README below the board for what this is, what it may not do, and how to run it by hand.
+
 
 See the README below the board for what this is, what it may not do, and how to run it by hand.
 

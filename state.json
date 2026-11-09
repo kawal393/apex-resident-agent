@@ -1,11 +1,11 @@
 {
-  "lastTick": "2026-11-08T23:55:38.891Z",
-  "ticks": 36,
+  "lastTick": "2026-11-09T05:36:01.273Z",
+  "ticks": 37,
   "rail": "https://filmverse-1mil8xwzv4y.qoder.website",
   "build": "91215ecdf248747f",
-  "wallClockSeconds": 2.1,
+  "wallClockSeconds": 2.5,
   "filesChecked": 14,
-  "slowestMs": 2058,
+  "slowestMs": 2448,
   "measured": {
     "rows": 1118,
     "cleared": 0,
@@ -13,23 +13,23 @@
     "stagesWired": "9/10"
   },
   "fingerprints": {
-    "index.html": "2afdb42fcd4797b3",
-    "workflow.html": "d13dcbd08486a5ec",
-    "verse.html": "353692668044b0cb",
-    "tools.html": "b2ecbd1807fd57a7",
-    "rights.html": "f36263ad18a66a02",
-    "verify.html": "a58dc5ebd9a20564",
-    "passport.html": "f82d9d9257135daa",
-    "console.html": "467796daaa70169b",
-    "dailies.html": "99c9bc376668a7f9",
+    "index.html": "103bc659ff08ea05",
+    "workflow.html": "365319358f2e2af3",
+    "verse.html": "21d058cb89aa93ab",
+    "tools.html": "230731806a125f8b",
+    "rights.html": "59e78e4f37718d2c",
+    "verify.html": "8020ac9fd96bde4b",
+    "passport.html": "9da599fe08b4264a",
+    "console.html": "64315cbe7ad5c44f",
+    "dailies.html": "37c62344e0fecd5e",
     "styles.css": "dce2a8e919d9a0b9",
-    "shell.js": "7d583dafbf178225",
+    "shell.js": "63392930f1721b36",
     "data.generated.js": "4a0c44387714b9e8",
-    "tool-links.js": "19c9b2fb3e015545",
+    "tool-links.js": "5a7ca89d3c00683d",
     "assets/dailies/preview.mp4": "73b432729e96c4e9"
   },
   "findings": [
-    "live files changed since the previous tick: index.html, workflow.html, verse.html, tools.html, rights.html, verify.html, passport.html, console.html, dailies.html, styles.css, shell.js, data.generated.js, tool-links.js"
+    "live files changed since the previous tick: index.html, workflow.html, verse.html, tools.html, rights.html, verify.html, passport.html, console.html, dailies.html, shell.js, tool-links.js"
   ],
   "backlog": [
     {
@@ -264,6 +264,12 @@
       "ok": false,
       "findings": 1,
       "s": 2.1
+    },
+    {
+      "at": "2026-11-09T05:36:01.273Z",
+      "ok": false,
+      "findings": 1,
+      "s": 2.5
     }
   ]
 }
