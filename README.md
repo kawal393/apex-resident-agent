@@ -2,22 +2,22 @@
 
 <!-- guardian:begin -->
 
-## FINDINGS — tick 50 at 2026-11-13T00:28:30.762Z
+## CLEAN — tick 51 at 2026-11-13T07:09:14.023Z
 
-The guardian found 1 thing(s) on the live rail. It reports; it does not fix by itself.
+Every public file answered, nothing changed since the previous tick, and no credential appeared in a file the world can read. **1 clean ticks in a row.**
 
 | measured | value |
 | --- | --- |
 | public files checked | 14 |
-| slowest response | 2596 ms |
-| tick wall clock | 2.7 s |
+| slowest response | 2156 ms |
+| tick wall clock | 2.2 s |
 | live build | `91215ecdf248747f` |
 | registry rows it can see | 1118 |
 | licences read by a human | 0 |
 | stages wired | 9/10 |
 
 ### Findings
-- live files changed since the previous tick: shell.js
+_none_
 
 ### Waiting, and who can move it
 - **builder** — name-the-till: APEX_TILL_URL is unset, so no one is checking that the paid endpoint still refuses strangers
@@ -27,12 +27,15 @@ The guardian found 1 thing(s) on the live rail. It reports; it does not fix by i
 ### Last 40 ticks
 
 ```
-□□□□□□■□□□□□□□■■■□□□□□□□□■■□□□□□□□□□□□□■
+□□□□□■□□□□□□□■■■□□□□□□□□■■□□□□□□□□□□□□■□
 ```
 
 Append-only memory: [ledger/ticks.jsonl](ledger/ticks.jsonl) · live figures: [state.json](state.json)
 
 <!-- guardian:end -->
+
+See the README below the board for what this is, what it may not do, and how to run it by hand.
+
 
 See the README below the board for what this is, what it may not do, and how to run it by hand.
 
