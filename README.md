@@ -2,14 +2,14 @@
 
 <!-- guardian:begin -->
 
-## CLEAN — tick 77 at 2026-11-20T17:43:17.057Z
+## CLEAN — tick 78 at 2026-11-20T23:24:43.990Z
 
-Every public file answered, nothing changed since the previous tick, and no credential appeared in a file the world can read. **27 clean ticks in a row.**
+Every public file answered, nothing changed since the previous tick, and no credential appeared in a file the world can read. **28 clean ticks in a row.**
 
 | measured | value |
 | --- | --- |
 | public files checked | 14 |
-| slowest response | 2321 ms |
+| slowest response | 2282 ms |
 | tick wall clock | 2.4 s |
 | live build | `91215ecdf248747f` |
 | registry rows it can see | 1118 |
@@ -27,12 +27,15 @@ _none_
 ### Last 40 ticks
 
 ```
-□□□□□□□□□□□□■□□□□□□□□□□□□□□□□□□□□□□□□□□□
+□□□□□□□□□□□■□□□□□□□□□□□□□□□□□□□□□□□□□□□□
 ```
 
 Append-only memory: [ledger/ticks.jsonl](ledger/ticks.jsonl) · live figures: [state.json](state.json)
 
 <!-- guardian:end -->
+
+See the README below the board for what this is, what it may not do, and how to run it by hand.
+
 
 See the README below the board for what this is, what it may not do, and how to run it by hand.
 
