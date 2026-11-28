@@ -2,15 +2,15 @@
 
 <!-- guardian:begin -->
 
-## CLEAN — tick 100 at 2026-11-28T04:17:13.432Z
+## CLEAN — tick 101 at 2026-11-28T13:27:46.366Z
 
 Every public file answered, nothing changed since the previous tick, and no credential appeared in a file the world can read. **40 clean ticks in a row.**
 
 | measured | value |
 | --- | --- |
 | public files checked | 14 |
-| slowest response | 2956 ms |
-| tick wall clock | 3.1 s |
+| slowest response | 2911 ms |
+| tick wall clock | 3 s |
 | live build | `91215ecdf248747f` |
 | registry rows it can see | 1118 |
 | licences read by a human | 0 |
@@ -33,6 +33,9 @@ _none_
 Append-only memory: [ledger/ticks.jsonl](ledger/ticks.jsonl) · live figures: [state.json](state.json)
 
 <!-- guardian:end -->
+
+See the README below the board for what this is, what it may not do, and how to run it by hand.
+
 
 See the README below the board for what this is, what it may not do, and how to run it by hand.
 
